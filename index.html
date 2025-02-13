@@ -4,328 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overon</title>
-    <link href="Overon Logo.png" rel="icon" type="image/x-icon">
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            /*font-family: "Georgia", serif;*/
-            font-family: 'Bookman Old Style';
-            margin: 0;
-            padding: 0;
-            
-        }
-
-        html, body {
-            scroll-behavior: smooth;
-        }
-
-        .navBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.navBar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    margin-right: 20px;
-}
-
-.navBar a:last-child {
-    margin-left: auto; /* Posune logo úplně doprava */
-}
-
-            .navBar img {
-                width: 2em;
-                position: relative;
-                max-width: 13rem;
-                max-height: 15rem;
-                top: 0.65em;
-            }
-
-        .overon {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .books {
-            position: relative;
-            width: 100%; /* Mírné zmenšení šířky pro lepší přizpůsobení */
-            height: 43rem; /* Mírné zmenšení výšky pro lepší viditelnost */
-            overflow: hidden;
-            margin: 0 auto; /* Zarovnání na střed */
-            background-image: url(Banner-Krvavy_Rad.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-
-        .bookImage img {
-            width: 110%; /* Mírné zvětšení pro posunutí obrázku */
-            height: 100%;
-            object-fit: cover; /* Udržení celého obrázku v rámci */
-            object-position: -5% center; /* Posunutí obrázku více doleva */
-        }
-
-        .bookText {
-            position: absolute;
-            right: 5%;
-            bottom: 5%;
-            color: #d4af37; /* Zlatá barva pro efekt fantasy */
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        }
-
-        .bookTextWrapper{
-            background-image: url(text.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .bookText h2 {
-            font-size: 50px;
-            margin: 0;
-            font-weight: bold;
-            text-stroke: 2px black; /* Obrys textu */
-            -webkit-text-stroke: 2px black; /* Obrys pro WebKit prohlížeče */
-        }
-
-        .bookText hr {
-            width: 100px;
-            border: 2px solid #d4af37;
-            margin: 10px 0;
-        }
-
-        .bookText p {
-            color: whitesmoke;
-            font-size: 18px;
-            max-width: 400px;
-            /* background: rgba(0, 0, 0, 0.5); */
-            padding: 10px; 
-            border-radius: 5px;
-            text-stroke: 0.1px black; /* Obrys textu */
-            -webkit-text-stroke: 0.1px black; /* Obrys pro WebKit prohlížeče */
-        }
-        
-        
-        .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px; /* Zajistí prostor při menších obrazovkách */
-}
-
-.textBackground {
-    color: whitesmoke;
-    font-size: 18px;
-    max-width: 50rem;
-    background-image: url(text.png), radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; /* Ujistí se, že celé pozadí bude vidět */
-    
-    padding: 40px 20px; /* Zvýšené vnitřní odsazení nahoře a dole */
-    border-radius: 5px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-        
-
-        .bookButtons {
-        margin-top: 15px;
-        }
-
-        .bookButtons button {
-            background-color:rgba(0, 0, 0, 0.5);
-            color:  #d4af37;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-right: 10px;
-            border-radius: 5px;
-        }
-
-        .bookButtons button:hover {
-            background-color:rgba(39, 39, 39, 0.349);
-        }
-
-        .overon {
-            background-image: url(wraeclast.webp);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .overon p{
-            color: whitesmoke;
-            font-family:'Bookman Old Style';
-        }
-
-        .overon h1 {
-            color: #d4af37;
-            font-family:serif;
-            font-size: clamp(2.3em, 17vw, 7em);
-            text-stroke: 0.1px black; /* Obrys textu */
-            -webkit-text-stroke: 1.5px black; /* Obrys pro WebKit prohlížeče */
-        }
-
-        .divider{
-            background-image: url(Divider.png);
-            background-position: center;
-            background-repeat: repeat-y;
-            background-size: cover;
-
-            height: 1rem;
-            padding: 0;
-            margin: 0;
-        }
-
-
-        footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-        background: black;
-        color: white;
-    }
-
-    .footerIcons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        max-width: 100px;
-    }
-
-    
-
-    .icon {
-        width: 40px;
-        height: 40px;
-        background: black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .icon img{
-        width: 40px;
-        height: 40px;
-        background: black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footerContacts {
-        margin-top: 10px;
-    }
-
-    .footerContacts a {
-        color: white;
-    }
-
-    .footerExtras {
-        margin-top: 10px;
-    }
-
-    .svgIcon{
-        fill:whitesmoke;
-    }
-
-    .footerExtras .icon {
-    display: flex;
-    justify-content: center;  /* Zarovná ikony na střed horizontálně */
-    align-items: center;      /* Zarovná ikony na střed vertikálně */
-    margin: 45px;  /* Volitelné: přidání mezery mezi ikonami */
-    margin-left: 45%;
-    }
-
-    .selectionWrapper {
-    background: none;
-    border: none;
-    padding-top: 1rem;
-    margin: 0;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-
-    .imageButton {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.imageButton img {
-    width: 2rem; /* Přizpůsob šířku podle potřeby */
-    height: 2rem;
-}
-
-.imageButtonSelection {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.imageButtonSelection img {
-    width: 3.5rem; /* Přizpůsob šířku podle potřeby */
-    height: 3.5rem;
-}
-
-.imageSelection{
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.imageSelection img{
-    width: 2rem !important; /* Přizpůsob šířku podle potřeby */
-    height: 2rem !important;
-    object-fit: contain;
-}
-
-
-    </style>
+    <link href="Images/Logo.png" rel="icon" type="image/x-icon">
+    <link href="Style/style.css" rel="stylesheet">
+    <!-- <script src="Script/script.js"></script> -->
 </head>
 <body>
     <div class="navBar" id="navBar">
         <a href="../Index.html">Zpět</a>
-        <button class="imageButton" onclick="toggleLanguage()"><img src="globe.svg"></button>
+        <button class="imageButton" onclick="toggleLanguage()"><img src="Images/globe.svg"></button>
         <a href="Wiki/">Wiki</a>
         <a href="https://www.instagram.com/overonofficial/">Instagram</a>
-        <a href="#"><img src="Logo White.png"></a>
+        <a href="#"><img src="Images/Logo White.png"></a>
     </div>
     <div class="divider">
         <p></p>
@@ -365,12 +54,12 @@
     </div>
     <div class="selectionWrapper">
     <div class="bookSelection">
-        <button class="imageButtonSelection"><img src="button_deactive.png"></button>
-        <button class="imageButtonSelection" onclick="toggleBook('grandfather')"><img id="grandfather" src="button.png"></button>
-        <button class="imageButtonSelection" onclick="toggleBook('krvavy_rad')"><img id="krvavy_rad"  src="button.png" class="active"></button>
+        <button class="imageButtonSelection"><img src="Images/button_deactive.png"></button>
+        <button class="imageButtonSelection" onclick="toggleBook('grandfather')"><img id="grandfather" src="Images/button.png"></button>
+        <button class="imageButtonSelection" onclick="toggleBook('krvavy_rad')"><img id="krvavy_rad"  src="Images/button.png" class="active"></button>
 <!-- <img src="Logo White.png" class="imageSelection"> -->
-        <button class="imageButtonSelection" onclick="toggleBook('spletac_snu')"><img id="spletac_snu"  src="button.png"></button>
-        <button class="imageButtonSelection"><img src="button_deactive.png"></button>
+        <button class="imageButtonSelection" onclick="toggleBook('spletac_snu')"><img id="spletac_snu"  src="Images/button.png"></button>
+        <button class="imageButtonSelection"><img src="Images/button_deactive.png"></button>
     </div>
     </div>
     <div class="divider">
@@ -378,10 +67,10 @@
     </div>
     <footer>
         <div class="footerIcons">
-            <div class="icon"><a href="https://www.instagram.com/overonofficial/"><img src="instagram.svg"></a></div>
-            <div class="icon"><a href="s"><img src="twitter.svg"></a></div>
-            <div class="icon"><a href="s"><img src="youtube.svg"></a></div>
-            <div class="icon"><a href="s"><img src="../Images/effect.png"></a></div>
+            <div class="icon"><a href="https://www.instagram.com/overonofficial/"><img src="Images/instagram.svg"></a></div>
+            <div class="icon"><a href="s"><img src="Images/twitter.svg"></a></div>
+            <div class="icon"><a href="s"><img src="Images/youtube.svg"></a></div>
+            <div class="icon"><a href="s"><img src="Images/github.svg"></a></div>
         </div>
         <div class="footerContacts">
             <p>Email: <a href="mailto:sipich888@gmail.com">sipich888@gmail.com</a></p>
@@ -390,148 +79,13 @@
         <div class="footerExtras">
             <p id="textRights">All rights reserved &copy; Šimon Pícha 2025</p>
             <hr>
-            <div class="icon"><a href="#navBar"><img src="chevrons-up.svg"></a><a href="#navBar"><img src="chevrons-up.svg"></a><a href="#navBar"><img src="chevrons-up.svg"><a href="#navBar"><img src="chevrons-up.svg"></a><a href="#navBar"><img src="chevrons-up.svg"></a></div>
+            <div class="icon"><a href="#navBar"><img src="Images/chevrons-up.svg"></a><a href="#navBar"><img src="Images/chevrons-up.svg"></a><a href="#navBar"><img src="Images/chevrons-up.svg"><a href="#navBar"><img src="Images/chevrons-up.svg"></a><a href="#navBar"><img src="Images/chevrons-up.svg"></a></div>
             <br>
             <p id="textPoE1">Many thanks to path of exile - top image and bottom ones are from their</p>
             <p id="textPoE2">website. They are just placeholders and will be replaced.</p>
             <a href="https://pathofexile2.com/early-access" id="anchorPoE"><p>Once again, thanks.</p></a>
         </div>
     </footer>
-    <script>
-
-        const languageKey = "language";
-        const bookKey = "book";
-        // let book = "krvavy_rad"
-
-        function loadLanguage() {
-            if (localStorage.getItem(languageKey) == null) {
-                localStorage.setItem(languageKey, "cz")
-
-                loadCZ()
-                return;
-            }
-
-            if (localStorage.getItem(languageKey) == "en") {
-                loadEN();
-            } else {
-                loadCZ();
-            }
-        }
-
-        function loadBook()
-        {
-            if (localStorage.getItem(bookKey) == null) {
-                localStorage.setItem(bookKey, "krvavy_rad")
-
-                bookLoadKR();
-                return;
-            }
-
-            else if (localStorage.getItem(bookKey) == "grandfather") {
-                bookLoadG();
-            } 
-
-            else if (localStorage.getItem(bookKey) == "spletac_snu") {
-                bookLoadSS();
-            } 
-            
-            else {
-                bookLoadKR();
-            } 
-        }
-
-        loadLanguage();
-        loadBook();
-
-        function toggleLanguage() {
-            let currentLanguage = localStorage.getItem(languageKey);
-
-            if (currentLanguage == "en") {
-                localStorage.setItem(languageKey, "cz");
-
-                loadCZ();
-            } else {
-                localStorage.setItem(languageKey, "en");
-
-                loadEN();
-            }
-        }
-
-        function loadCZ() {
-            document.getElementById("textWelcome").innerText = "Overon je svět, kde temnota a strach vládnou na každém kroku. Zničená království a ztracená města jsou plná hrůz a nestvůr, které se živí strachem a zoufalstvím. Každý, kdo se odváží překročit hranice známého světa, se ocitá v říši, kde nic není bezpečné a kde magie je nebezpečná a zvrácená. Smrt je zde jen začátkem něčeho ještě horšího a každá snaha o naději se ztrácí v šedi tohoto světa. Mnozí ztrácejí svou lidskost, jak se jejich duše odevzdávají temným silám, a odpovědi na tajemství Overonu jsou stejně záhadné jako jeho hrůzy. V tomto světě, kde panuje chaos, není místo pro slabé. Těm, kteří se rozhodnou přežít, hrozí nejen smrt, ale i ztráta duše v nekonečných stínech a nebezpečných kouzlech.";
-            document.getElementById("textBookHeader").innerText = "Overon: Krvavý řád";
-            document.getElementById("textBook").innerText = "Enzim z Taergonu, kdysi řadový voják, nyní velitel řádu elitářů. Byl poslední nadějí, ale jeho rozkaz zahájil Velkou elitářskou čistku. V jeho mysli zní hlas ze samotného počátku světa – síla, která musí chránit lidstvo před temnotou Riftu.";
-            document.getElementById("supportButton").innerText = "Podpořit";
-            document.getElementById("showButton").innerText = "Ukázka";
-            document.getElementById("textRights").innerText = "Všechna práva vyhrazena &copy; Šimon Pícha 2025";
-            document.getElementById("textPoE1").innerText = "Tisíceré díky path of exile - horní obrázek je od nich.";
-            document.getElementById("textPoE2").innerText = "Jedná se o place holdder a bude změňěn.";
-            document.getElementById("anchorPoE").innerText = "Ještě jednou děkuji.";
-        }
-
-        function loadEN() {
-            document.getElementById("textWelcome").innerText = "Enzim from Taergon, once a common soldier, now leader of the Elitarian Order. He was the last hope, but his command sparked the Great Elitarian Purge. In his mind echoes a voice from the dawn of time—a force that must shield humanity from the Rift’s darkness.";
-            document.getElementById("textBookHeader").innerText = "Overon: Blood order";
-            document.getElementById("textBook").innerText = "Enzim of Taergon, once a simple soldier, now a leader. The last chance of order´s survival, but his orders have started a great purge. In his mind and ancient voice - a power that wants to protect humanity before itself and ruinouss power of Rift";
-            document.getElementById("supportButton").innerText = "Support";
-            document.getElementById("showButton").innerText = "Show sample";
-            document.getElementById("textRights").innerText = "All rights reserved &copy; Šimon Pícha 2025";
-            document.getElementById("textPoE1").innerText = "Many thanks to path of exile - top image and bottom ones are from their";
-            document.getElementById("textPoE2").innerText = "website. They are just placeholders and will be replaced.";
-            document.getElementById("anchorPoE").innerText = "Once again, thanks.";
-        }
-
-
-        function toggleBook(book)
-        {
-
-            // book = selectBook;
-            localStorage.getItem(bookKey, book);
-
-            if(book == "krvavy_rad")
-            {
-                bookLoadKR();
-            }
-            else if(book == "grandfather")
-            {
-                bookLoadG();
-            }
-            else if(book == "spletac_snu")
-            {
-                bookLoadSS();
-            }
-        }
-
-        function bookLoadKR()
-        {
-            document.getElementById("krvavy_rad").src = "button_active.png";
-            document.getElementById("grandfather").src = "button.png";
-            document.getElementById("spletac_snu").src = "button.png";
-
-            document.querySelector('.books').style.backgroundImage = "url('Banner-Krvavy_Rad.jpg')";
-
-
-        }
-
-        function bookLoadG()
-        {
-            document.getElementById("krvavy_rad").src = "button.png";
-            document.getElementById("grandfather").src = "button_active.png";
-            document.getElementById("spletac_snu").src = "button.png";
-
-            document.querySelector('.books').style.backgroundImage = "url('Banner_ostatni.png')";
-
-        }
-
-        function bookLoadSS()
-        {
-            document.getElementById("krvavy_rad").src = "button.png";
-            document.getElementById("grandfather").src = "button.png";
-            document.getElementById("spletac_snu").src = "button_active.png";
-
-            document.querySelector('.books').style.backgroundImage = "url('Banner_ostatni.png')";
-
-        }
-    </script>
+    <script src="Script/script.js"></script>
 </body>
 </html>
