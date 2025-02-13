@@ -1,0 +1,310 @@
+
+body {
+    background-color: black;
+    color: white;
+    /*font-family: "Georgia", serif;*/
+    font-family: 'Bookman Old Style';
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+.navBar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px;
+}
+
+.navBar a {
+color: white;
+text-decoration: none;
+font-size: 18px;
+margin-right: 20px;
+}
+
+.navBar a:last-child {
+margin-left: auto; /* Posune logo úplně doprava */
+}
+
+    .navBar img {
+        width: 2em;
+        position: relative;
+        max-width: 13rem;
+        max-height: 15rem;
+        top: 0.65em;
+    }
+
+.overon {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.books {
+    position: relative;
+    width: 100%; /* Mírné zmenšení šířky pro lepší přizpůsobení */
+    height: 43rem; /* Mírné zmenšení výšky pro lepší viditelnost */
+    overflow: hidden;
+    margin: 0 auto; /* Zarovnání na střed */
+    background-image: url(../Images/Banner-Krvavy_Rad.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bookImage img {
+    width: 110%; /* Mírné zvětšení pro posunutí obrázku */
+    height: 100%;
+    object-fit: cover; /* Udržení celého obrázku v rámci */
+    object-position: -5% center; /* Posunutí obrázku více doleva */
+}
+
+.bookText {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    color: #d4af37; /* Zlatá barva pro efekt fantasy */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.bookTextWrapper{
+    background-image: url(../Images/text.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bookText h2 {
+    font-size: 50px;
+    margin: 0;
+    font-weight: bold;
+    text-stroke: 2px black; /* Obrys textu */
+    -webkit-text-stroke: 2px black; /* Obrys pro WebKit prohlížeče */
+}
+
+.bookText hr {
+    width: 100px;
+    border: 2px solid #d4af37;
+    margin: 10px 0;
+}
+
+.bookText p {
+    color: whitesmoke;
+    font-size: 18px;
+    max-width: 400px;
+    /* background: rgba(0, 0, 0, 0.5); */
+    padding: 10px; 
+    border-radius: 5px;
+    text-stroke: 0.1px black; /* Obrys textu */
+    -webkit-text-stroke: 0.1px black; /* Obrys pro WebKit prohlížeče */
+}
+
+
+.wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+padding: 20px; /* Zajistí prostor při menších obrazovkách */
+}
+
+.textBackground {
+color: whitesmoke;
+font-size: 18px;
+max-width: 50rem;
+background-image: url(../Images/text.png), radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover; /* Ujistí se, že celé pozadí bude vidět */
+
+padding: 40px 20px; /* Zvýšené vnitřní odsazení nahoře a dole */
+border-radius: 5px;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+.bookButtons {
+margin-top: 15px;
+}
+
+.bookButtons button {
+    background-color:rgba(0, 0, 0, 0.5);
+    color:  #d4af37;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.bookButtons button:hover {
+    background-color:rgba(39, 39, 39, 0.349);
+}
+
+.overon {
+    background-image: url(../Images/wraeclast.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.overon p{
+    color: whitesmoke;
+    font-family:'Bookman Old Style';
+}
+
+.overon h1 {
+    color: #d4af37;
+    font-family:serif;
+    font-size: clamp(2.3em, 17vw, 7em);
+    text-stroke: 0.1px black; /* Obrys textu */
+    -webkit-text-stroke: 1.5px black; /* Obrys pro WebKit prohlížeče */
+}
+
+.divider{
+    background-image: url(../Images/Divider.png);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+
+    height: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+footer {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 20px;
+background: black;
+color: white;
+}
+
+.footerIcons {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+max-width: 100px;
+}
+
+
+
+.icon {
+width: 40px;
+height: 40px;
+background: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.icon img{
+width: 40px;
+height: 40px;
+background: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.footerContacts {
+margin-top: 10px;
+}
+
+.footerContacts a {
+color: white;
+}
+
+.footerExtras {
+margin-top: 10px;
+}
+
+.svgIcon{
+fill:whitesmoke;
+}
+
+.footerExtras .icon {
+display: flex;
+justify-content: center;  /* Zarovná ikony na střed horizontálně */
+align-items: center;      /* Zarovná ikony na střed vertikálně */
+margin: 45px;  /* Volitelné: přidání mezery mezi ikonami */
+margin-left: 45%;
+}
+
+.selectionWrapper {
+background: none;
+border: none;
+padding-top: 1rem;
+margin: 0;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+
+.imageButton {
+background: none;
+border: none;
+padding: 0;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.imageButton img {
+width: 2rem; /* Přizpůsob šířku podle potřeby */
+height: 2rem;
+}
+
+.imageButtonSelection {
+background: none;
+border: none;
+padding: 0;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+.imageButtonSelection img {
+width: 3.5rem; /* Přizpůsob šířku podle potřeby */
+height: 3.5rem;
+}
+
+.imageSelection{
+background: none;
+border: none;
+padding: 0;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+}
+
+.imageSelection img{
+width: 2rem !important; /* Přizpůsob šířku podle potřeby */
+height: 2rem !important;
+object-fit: contain;
+}
