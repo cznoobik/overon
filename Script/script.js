@@ -30,7 +30,7 @@ const bookTexts = {
         },
         "en": {
             "header": "Overon: Dream Weaver",
-            "description": "Description for the Spletáč Snů book in English."
+            "description": "Popis pro knihu Spletáč Snů v češtině."
         }
     }
 };
