@@ -14,10 +14,11 @@ html, body {
 }
 
 .navBar {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Zarovnání na střed */
+    padding: 20px;
+    position: relative;
 }
 
 .navBar a {
@@ -30,6 +31,8 @@ margin-right: 20px;
 .navBar a:last-child {
 margin-left: auto; /* Posune logo úplně doprava */
 }
+
+
 
     .navBar img {
         width: 2em;
@@ -307,4 +310,25 @@ position: absolute;
 width: 2rem !important; /* Přizpůsob šířku podle potřeby */
 height: 2rem !important;
 object-fit: contain;
+}
+
+
+.separator {
+    font-weight: bold;
+    margin: 0 10px; /* Odstup od textu */
+    color: white; /* Barva podle designu */
+}
+
+/* Odkazy zarovnané na střed */
+.navLinks {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Zajistí, že se roztáhne na dostupný prostor */
+}
+
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px; /* Odstup mezi odkazy */
 }
