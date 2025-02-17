@@ -58,7 +58,8 @@ function loadBook() {
     if (localStorage.getItem(bookKey) == null) {
         localStorage.setItem(bookKey, "krvavy_rad");
     }
-    updateBook();
+    updateBookText();
+    
 }
 
 function updateBook() {
@@ -73,6 +74,7 @@ function updateBook() {
     }
     
     updateBookText();
+    
 }
 
 function toggleLanguage() {
@@ -88,6 +90,9 @@ function updateBookText() {
 
     document.getElementById("textBookHeader").innerText = bookTexts[currentBook][currentLanguage].header;
     document.getElementById("textBook").innerText = bookTexts[currentBook][currentLanguage].description;
+
+    updateBook();
+    
 }
 
 function loadCZ() {
@@ -112,7 +117,8 @@ function loadEN() {
 
 function toggleBook(book) {
     localStorage.setItem(bookKey, book);
-    updateBook();
+    updateBookText();
+    
 }
 
 function bookLoadKR() {
@@ -139,6 +145,7 @@ function bookLoadG() {
     document.getElementById("textBookHeader").style.color = "#d4af37";
     document.getElementById("bookText").style.color = "#d4af37";
     document.querySelector(".bookText hr").style.borderColor = "#d4af37";
+    
 }
 
 function bookLoadSS() {
